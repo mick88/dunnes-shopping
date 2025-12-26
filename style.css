@@ -1,0 +1,273 @@
+:root {
+    --primary: #10b981;
+    /* Emerald 500 */
+    --primary-dark: #059669;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --danger: #ef4444;
+    --nav-height: 60px;
+    --header-height: 60px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header */
+.app-header {
+    height: var(--header-height);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-shadow: var(--shadow-sm);
+    z-index: 10;
+}
+
+.app-header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.list-counter {
+    font-size: 0.875rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Main Content */
+#main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    padding-bottom: calc(var(--nav-height) + 1rem);
+    /* Space for nav */
+}
+
+/* Category Sections */
+.category-section {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+}
+
+/* Product Rows (Compact List) */
+.product-card {
+    background: var(--card-bg);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    /* Changed to row for compact layout */
+    align-items: center;
+    gap: 0.75rem;
+    transition: background-color 0.2s;
+    user-select: none;
+    /* Prevent text selection during rapid clicking */
+}
+
+.category-section .product-card:first-of-type {
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.category-section .product-card:last-of-type {
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    border-bottom: none;
+    box-shadow: var(--shadow-sm);
+}
+
+/* States */
+.product-card.dismissed {
+    opacity: 0.5;
+    background-color: #f9fafb;
+}
+
+.product-card.dismissed .product-name {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.product-card.added {
+    background-color: #ecfdf5;
+    /* Emerald 50 */
+    border-left: 3px solid var(--primary);
+    padding-left: calc(1rem - 3px);
+    /* Compensate for border */
+}
+
+/* Elements inside row */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 0.1rem;
+}
+
+.product-name:hover {
+    color: var(--primary);
+}
+
+.product-price {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.product-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+/* Compact Buttons */
+.btn {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: white;
+    color: var(--text-muted);
+}
+
+.btn-add {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: white;
+}
+
+/* Active state for Add button when row is added */
+.product-card.added .btn-add {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-dismiss {
+    color: var(--danger);
+    border-color: #feca_ca;
+}
+
+/* Active state for Dismiss button */
+.product-card.dismissed .btn-dismiss {
+    background-color: #fee2e2;
+    border-color: transparent;
+}
+
+/* Remove button (List View) */
+.btn-remove {
+    background-color: white;
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+/* Bottom Nav */
+.bottom-nav {
+    height: var(--nav-height);
+    background: var(--card-bg);
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    padding: 8px 32px;
+}
+
+.nav-btn.active {
+    color: var(--primary);
+}
+
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.badge {
+    position: absolute;
+    top: 4px;
+    right: 24px;
+    background: var(--danger);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 99px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+}
+
+/* List Item Specifics */
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
