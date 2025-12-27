@@ -1,5 +1,7 @@
 // Products are loaded from data.js globally
 
+const STORAGE_KEY = 'shopping-list-app-state';
+
 const state = {
     view: 'browse', // 'browse' or 'list'
     shoppingList: [],
@@ -12,6 +14,7 @@ const elements = {
     navList: document.getElementById('nav-list'),
     listCounter: document.getElementById('list-counter'),
     navBadge: document.getElementById('nav-badge'),
+    btnReset: document.getElementById('btn-reset'),
 };
 
 // Categories Order
@@ -25,8 +28,34 @@ const CATEGORY_ORDER = [
 ];
 
 function init() {
+    loadState();
     render();
     setupEventListeners();
+}
+
+function loadState() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+        try {
+            const parsed = JSON.parse(stored);
+            state.shoppingList = parsed.shoppingList || [];
+            // Convert array back to Set
+            state.dismissed = new Set(parsed.dismissed || []);
+
+            // Re-hydrate shoppingList items from window.products to ensure data consistency?
+            // Actually, storing full object is fine for now, but names are the key.
+        } catch (e) {
+            console.error('Failed to load state', e);
+        }
+    }
+}
+
+function saveState() {
+    const toSave = {
+        shoppingList: state.shoppingList,
+        dismissed: Array.from(state.dismissed), // Convert Set to Array
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(toSave));
 }
 
 function setupEventListeners() {
@@ -40,6 +69,12 @@ function setupEventListeners() {
         state.view = 'list';
         updateNav();
         render();
+    });
+
+    elements.btnReset.addEventListener('click', () => {
+        if (confirm('Are you sure you want to reset all selections?')) {
+            handleReset();
+        }
     });
 }
 
@@ -158,12 +193,13 @@ function createProductCard(product, mode, index) {
     nameLink.href = `https://www.dunnesstoresgrocery.com/results?q=${query}`;
     nameLink.target = "_blank";
 
-    const price = document.createElement('div');
-    price.className = 'product-price';
-    price.textContent = product.price;
+    // Price removed as per request
+    // const price = document.createElement('div');
+    // price.className = 'product-price';
+    // price.textContent = product.price;
 
     info.appendChild(nameLink);
-    info.appendChild(price);
+    // info.appendChild(price);
 
     const actions = document.createElement('div');
     actions.className = 'product-actions';
@@ -201,12 +237,13 @@ function handleDismiss(product) {
         state.dismissed.delete(product.name);
     } else {
         state.dismissed.add(product.name);
-        // If it was added, remove it? Or can it be both? Usually Dismiss overrides Add
+        // If it was added, remove it?
         const listIndex = state.shoppingList.findIndex(p => p.name === product.name);
         if (listIndex > -1) {
             state.shoppingList.splice(listIndex, 1);
         }
     }
+    saveState();
     render();
 }
 
@@ -224,11 +261,20 @@ function handleAdd(product) {
             state.dismissed.delete(product.name);
         }
     }
+    saveState();
     render();
 }
 
 function handleRemove(index) {
     state.shoppingList.splice(index, 1);
+    saveState();
+    render();
+}
+
+function handleReset() {
+    state.shoppingList = [];
+    state.dismissed.clear();
+    saveState();
     render();
 }
 
