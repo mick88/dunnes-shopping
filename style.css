@@ -99,8 +99,14 @@ body {
     letter-spacing: 0.05em;
     color: var(--text-muted);
     font-weight: 600;
-    margin-bottom: 0.75rem;
-    padding-left: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.25rem;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 5;
+    /* Ensure it covers the full width including padding of container if needed, 
+       but container has padding, so this sits inside. */
 }
 
 /* Product Rows (Compact List) */
