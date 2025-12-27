@@ -189,8 +189,9 @@ function createProductCard(product, mode, index) {
     const nameLink = document.createElement('a');
     nameLink.className = 'product-name';
     nameLink.textContent = product.name;
-    const query = product.name.split(' ').join('+');
-    nameLink.href = `https://www.dunnesstoresgrocery.com/results?q=${query}`;
+    // Use Google "I'm Feeling Lucky" restricted to the site
+    const query = `site:www.dunnesstoresgrocery.com ${product.name}`;
+    nameLink.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
     nameLink.target = "_blank";
 
     // Price removed as per request
