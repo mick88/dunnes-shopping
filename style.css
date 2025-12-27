@@ -191,13 +191,27 @@ body {
 
 /* Compact Buttons */
 .btn {
-    padding: 0.4rem 0.6rem;
+    padding: 0.6rem 1rem;
+    /* Larger touch target */
     border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 500;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    /* Larger font */
+    font-weight: 600;
+    min-width: 44px;
+    /* Minimum touch target width recommendation */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     color: var(--text-muted);
+    transition: all 0.2s ease;
+    /* smooth press */
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 .btn-add {
