@@ -188,7 +188,8 @@ function createProductCard(product, mode, index) {
 
     const nameLink = document.createElement('a');
     nameLink.className = 'product-name';
-    nameLink.textContent = product.name;
+    const emoji = getEmojiForProduct(product);
+    nameLink.textContent = `${emoji} ${product.name}`;
     // Use Google "I'm Feeling Lucky" restricted to the site
     const query = `site:www.dunnesstoresgrocery.com ${product.name}`;
     nameLink.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
@@ -280,4 +281,71 @@ function handleReset() {
 }
 
 // Start app
+// Helper to determine emoji based on name/category
+function getEmojiForProduct(product) {
+    const name = product.name.toLowerCase();
+    const cat = product.category;
+
+    // Specific Keyword Matches
+    if (name.includes('milk')) return '🥛';
+    if (name.includes('egg')) return '🥚';
+    if (name.includes('cheese') || name.includes('mozzarella') || name.includes('brie') || name.includes('ricotta') || name.includes('cheddar')) return '🧀';
+    if (name.includes('butter')) return '🧈';
+    if (name.includes('yogurt') || name.includes('yoghurt')) return '🥣';
+    if (name.includes('cream')) return '🥛';
+
+    if (name.includes('bread') || name.includes('sourdough') || name.includes('wraps')) return '🍞';
+    if (name.includes('chocolate') || name.includes('cocoa') || name.includes('reese')) return '🍫';
+    if (name.includes('biscuit') || name.includes('wafer') || name.includes('bar') || name.includes('flapjack') || name.includes('treatsize')) return '🍪';
+    if (name.includes('rice') || name.includes('pasta') || name.includes('wheat') || name.includes('grain')) return '🍚';
+    if (name.includes('bean') || name.includes('chickpea') || name.includes('lentil') || name.includes('tomato') || name.includes('passata')) return '🥫';
+    if (name.includes('oil') || name.includes('sauce')) return '🍶';
+    if (name.includes('tea') || name.includes('coffee')) return '☕';
+    if (name.includes('water') || name.includes('juice') || name.includes('drink')) return '🥤';
+
+    // Fruit
+    if (name.includes('strawberry') || name.includes('berry') || name.includes('currant')) return '🍓';
+    if (name.includes('banana')) return '🍌';
+    if (name.includes('apple')) return '🍎';
+    if (name.includes('orange') || name.includes('citrus') || name.includes('grapefruit') || name.includes('peeler')) return '🍊';
+    if (name.includes('kiwi')) return '🥝';
+    if (name.includes('avocado')) return '🥑';
+    if (name.includes('grape')) return '🍇';
+
+    // Veg
+    if (name.includes('carrot')) return '🥕';
+    if (name.includes('potato')) return '🥔';
+    if (name.includes('onion') || name.includes('garlic') || name.includes('leek')) return '🧅';
+    if (name.includes('tomato')) return '🍅';
+    if (name.includes('cucumber') || name.includes('courgette')) return '🥒';
+    if (name.includes('salad') || name.includes('rocket') || name.includes('spinach') || name.includes('lettuce')) return '🥗';
+    if (name.includes('corn')) return '🌽';
+    if (name.includes('broccoli') || name.includes('cauliflower')) return '🥦';
+    if (name.includes('pepper') || name.includes('chilli')) return '🌶️';
+    if (name.includes('mushroom')) return '🍄';
+    if (name.includes('ginger')) return '🫚';
+
+    // Meat/Alt
+    if (name.includes('chicken') || name.includes('turkey')) return '🍗';
+    if (name.includes('beef') || name.includes('steak') || name.includes('burger') || name.includes('meatball') || name.includes('cheatball')) return '🥩';
+    if (name.includes('ham') || name.includes('pork') || name.includes('bacon')) return '🥓';
+    if (name.includes('fish') || name.includes('salmon')) return '🐟';
+    if (name.includes('quorn') || name.includes('tofu') || name.includes('vegan') || name.includes('veggie')) return '🌱';
+
+    // Household
+    if (name.includes('cat') || name.includes('dog') || name.includes('pet')) return '🐱';
+    if (name.includes('tissue') || name.includes('roll') || name.includes('towel')) return '🧻';
+    if (name.includes('clean') || name.includes('wash') || name.includes('liquid') || name.includes('tablet') || name.includes('rinse')) return '🧼';
+    if (name.includes('brush') || name.includes('pad')) return '🧽';
+
+    // Default by Category
+    if (cat === 'Fridge') return '❄️';
+    if (cat === 'Frozen' || cat === 'Freezer') return '🧊';
+    if (cat === 'Fresh Produce') return '🥦';
+    if (cat === 'Pantry') return '🥫';
+    if (cat === 'Household') return '🏠';
+
+    return '📦';
+}
+
 init();
