@@ -100,6 +100,7 @@ window.products = [
 
     // Freezer
     { name: "Dunnes Stores Freshly Frozen Petits Pois & Sweetcorn 750g", category: "Freezer", price: "€1.09" },
+    { name: "Dunnes Stores Freshly Frozen Very Fine Green Beans 500g", category: "Freezer", price: "€1.00" },
 
     // Household & Pets
     { name: "Dunnes Stores Multi Purpose Kitchen Towel 3 Ply 4 Rolls", category: "Household", price: "€2.20" },
@@ -113,4 +114,5 @@ window.products = [
     { name: "Dunnes Stores Rinse Aid for Dishwasher 1 Litre", category: "Household", price: "€2.75" },
     { name: "Dishmatic 6 General Purpose Refills", category: "Household", price: "€4.20" },
     { name: "Dunnes Stores My Family Favourites Cat Food Meaty Selection in Gravy 6x400g", category: "Household", price: "€3.69" },
+    { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Household", price: "€4.19" },
 ];
