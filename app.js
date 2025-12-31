@@ -192,7 +192,7 @@ function createProductCard(product, mode, index) {
     nameLink.textContent = `${emoji} ${product.name}`;
     // Use Google "I'm Feeling Lucky" restricted to the site
     const query = `site:www.dunnesstoresgrocery.com ${product.name}`;
-    nameLink.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
+    nameLink.href = product.url || `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
     nameLink.target = "_blank";
 
     info.appendChild(nameLink);

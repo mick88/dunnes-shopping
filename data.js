@@ -1,6 +1,6 @@
 window.products = [
     // Fridge
-    { name: "Dunnes Stores Irish Whole Milk 1 Litre", category: "Fridge", price: "€1.21" },
+    { name: "Dunnes Stores Irish Whole Milk 1 Litre", category: "Fridge", price: "€1.21", "url": "https://www.dunnesstoresgrocery.com/product/dunnes-stores-irish-whole-milk-1-litre-id-100806906" },
     { name: "Łaciate 2,0% UHT Milk 1.5 Litre", category: "Fridge", price: "€2.45" },
     { name: "Dunnes Stores 12 Irish Free Range Eggs Medium", category: "Fridge", price: "€4.09" },
     { name: "Dunnes Stores 6 Irish Free Range Eggs Medium", category: "Fridge", price: "€2.09" },
