@@ -277,6 +277,7 @@ function handleReset() {
 // Start app
 // Helper to determine emoji based on name/category
 function getEmojiForProduct(product) {
+    if (product.icon) return product.icon;
     const name = product.name.toLowerCase();
     const cat = product.category;
 
@@ -338,6 +339,8 @@ function getEmojiForProduct(product) {
     if (cat === 'Fresh Produce') return '🥦';
     if (cat === 'Pantry') return '🥫';
     if (cat === 'Household') return '🏠';
+    if (cat === 'Baby') return '👶';
+    if (cat === 'Treats') return '🍪';
 
     return '📦';
 }
