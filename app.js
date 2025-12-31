@@ -195,13 +195,7 @@ function createProductCard(product, mode, index) {
     nameLink.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
     nameLink.target = "_blank";
 
-    // Price removed as per request
-    // const price = document.createElement('div');
-    // price.className = 'product-price';
-    // price.textContent = product.price;
-
     info.appendChild(nameLink);
-    // info.appendChild(price);
 
     const actions = document.createElement('div');
     actions.className = 'product-actions';
