@@ -10,10 +10,11 @@ window.products = [
     { name: "Dunnes Stores My Family Favourites Irish Mild White Cheddar 500g", category: "Fridge", price: "€3.00" },
     { name: "Glenilen Farm Kids Yoghurt Natural 90g", category: "Fridge", price: "€0.89" },
     { name: "Coburger Brie 200g", category: "Fridge", price: "€1.54" },
-    { name: "Glenilen Farm Kids Yoghurt Strawberry 90g", category: "Fridge", price: "€0.89" },
     { name: "Dunnes Stores Fresh Cream 250ml", category: "Fridge", price: "€1.59" },
     { name: "Dunnes Stores 6 Irish Free Range Eggs Medium", category: "Fridge", price: "€2.09" },
     { name: "Dunnes Stores My Family Favourites Mozzarella 200g", category: "Fridge", price: "€0.75" },
+    { name: "Dunnes Stores Mild & Firm Halloumi 250g", category: "Fridge", price: "€2.75" },
+    { name: "Dunnes Stores Organic Irish Beef Round Steak Mince 355g", category: "Fridge", price: "€5.19" },
 
     // Pantry
     { name: "Reese's Milk Chocolate and Peanut Butter Cups, Multipack (5 Pack), 77g", category: "Pantry", price: "€1.62" },
@@ -55,10 +56,11 @@ window.products = [
     { name: "Dunnes Stores Organic Porridge Oats Wholegrain 1kg", category: "Pantry", price: "€1.39" },
     { name: "Dunnes Stores Organic Coconut Milk 400ml", category: "Pantry", price: "€1.39" },
     { name: "Dunnes Stores My Family Favourites Plain Flour 2kg", category: "Pantry", price: "€1.59" },
+    { name: "Frontier Foods Tahini 270g", category: "Pantry", price: "€3.00" },
 
     // Fresh Produce
     { name: "Dunnes Stores Organic Carrots 1kg", category: "Fresh Produce", price: "€1.69" },
-    { name: "Dunnes Stores Handpicked Irish Baby Strawberries 125g", category: "Fresh Produce", price: "€1.14" },
+    { name: "Dunnes Stores Handpicked Irish Baby Strawberries 125g", category: "Fresh Produce", price: "€1.29" },
     { name: "Dunnes Stores 6 Fresh Bananas", category: "Fresh Produce", price: "€1.33" },
     { name: "Dunnes Stores Peppery Wild Rocket Leaves 100g", category: "Fresh Produce", price: "€1.15" },
     { name: "Dunnes Stores Organic Cucumber", category: "Fresh Produce", price: "€1.39" },
@@ -106,7 +108,6 @@ window.products = [
     { name: "Dunnes Stores Multi Purpose Kitchen Towel 3 Ply 4 Rolls", category: "Household", price: "€2.20" },
     { name: "Comfort Fabric Conditioner Pure 31 washes (930 ml)", category: "Household", price: "€2.50" },
     { name: "Dunnes Stores Toilet Tissue 12 Rolls", category: "Household", price: "€4.00" },
-    { name: "Dunnes Stores Cleansing Cotton Pads", category: "Household", price: "€2.00" },
     { name: "Sudocrem Antiseptic Healing Cream 250g", category: "Household", price: "€8.00" },
     { name: "Shannon Baking Parchment 12m", category: "Household", price: "€2.20" },
     { name: "Crystale Platinum Dishwasher Tablets Lemon Fresh 26x18g (468g)", category: "Household", price: "€2.50" },
@@ -115,4 +116,7 @@ window.products = [
     { name: "Dishmatic 6 General Purpose Refills", category: "Household", price: "€4.20" },
     { name: "Dunnes Stores My Family Favourites Cat Food Meaty Selection in Gravy 6x400g", category: "Household", price: "€3.69" },
     { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Household", price: "€4.19" },
+    { name: "Beeline Kids Vitamin D3 Pump 28ml", category: "Household", price: "€13.50" },
+    { name: "Dunnes Stores Cleansing Cotton Pads", category: "Household", price: "€2.00" },
+    { name: "Kleenex Supporting Mind - Single Cube Tissue Box", category: "Household", price: "€2.00" },
 ];
