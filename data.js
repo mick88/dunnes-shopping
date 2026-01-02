@@ -50,6 +50,9 @@ window.products = [
     { name: "Frontier Foods Tahini 270g", category: "Pantry", price: "€3.00" },
     { name: "Dunnes Stores Fusilli 500g", category: "Pantry", price: "€1.49", icon: "🍝", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-fusilli-500g-id-100883303" },
 
+    // Spices
+    { name: "Dunnes Stores Bay Leaves 4g", category: "Spices", price: "€1.00", icon: "🌿", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-bay-leaves-4g-id-100206145" },
+
     // Treats
     { name: "Reese's Milk Chocolate and Peanut Butter Cups, Multipack (5 Pack), 77g", category: "Treats", price: "€1.62" },
     { name: "McVitie's Signature Chocolate Cream Swirls 142g", category: "Treats", price: "€2.00" },
