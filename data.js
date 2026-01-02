@@ -48,6 +48,7 @@ window.products = [
     { name: "Dunnes Stores Organic Coconut Milk 400ml", category: "Pantry", price: "€1.39", icon: "🥥" },
     { name: "Dunnes Stores My Family Favourites Plain Flour 2kg", category: "Pantry", price: "€1.59" },
     { name: "Frontier Foods Tahini 270g", category: "Pantry", price: "€3.00" },
+    { name: "Dunnes Stores Fusilli 500g", category: "Pantry", price: "€1.49", icon: "🍝", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-fusilli-500g-id-100883303" },
 
     // Treats
     { name: "Reese's Milk Chocolate and Peanut Butter Cups, Multipack (5 Pack), 77g", category: "Treats", price: "€1.62" },
