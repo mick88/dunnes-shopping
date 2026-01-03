@@ -42,6 +42,7 @@ window.products = [
     { name: "Dunnes Stores Sparkling Irish Spring Water 6 x 2 Litre", category: "Pantry", icon: "💧" },
     { name: "Dunnes Stores Italian Tomato Passata 500g", category: "Pantry" },
     { name: "Dunnes Stores Spanish Extra Virgin Olive Oil 500ml", category: "Pantry" },
+    { name: "Dunnes Stores Pure Vegetable Oil 1L\n", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-pure-vegetable-oil-1l-id-100806234" },
     { name: "Dunnes Stores Baking at Home Cocoa Powder 250g", category: "Pantry" },
     { name: "Dunnes Stores My Family Favourites Basmati Rice 1kg", category: "Pantry" },
     { name: "Dunnes Stores Organic Porridge Oats Wholegrain 1kg", category: "Pantry" },
@@ -84,8 +85,9 @@ window.products = [
     { name: "Dunnes Stores Organic Irish Potatoes 2kg", category: "Fresh Produce" },
     { name: "Dunnes Stores Organic Celery", category: "Fresh Produce", icon: "🥬" },
     { name: "Dunnes Stores My Family Favourites Red Onions", category: "Fresh Produce" },
-    { name: "Dunnes Stores My Family Favourites Onions 1kg", category: "Fresh Produce" },
+    { name: "Dunnes Stores My Family Favourites Onions 1kg", category: "Fresh Produce", url: "dunnesstoresgrocery.com/product/dunnes-stores-my-family-favourites-onions-1kg-id-100290685" },
     { name: "Dunnes Stores Organic Vine Tomatoes 400g", category: "Fresh Produce", icon: "🍅" },
+    { name: "Dunnes Stores My Family Favourites Fresh Irish Leeks 500g", category: "Fresh Produce", icon: "🥬" },
 
     // Meat & Veggie Alt
     { name: "Quorn Vegetarian Pieces 500g", category: "Meat & Alt" },
