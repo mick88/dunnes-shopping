@@ -39,7 +39,6 @@ window.products = [
     { name: "Epicure Organic Bijoux Verts Lentils in Water 400g", category: "Pantry" },
     { name: "Epicure Organic Black Beans in Water 400g", category: "Pantry" },
     { name: "Gem Bread Soda 500g", category: "Pantry" },
-    { name: "Dunnes Stores Sparkling Irish Spring Water 6 x 2 Litre", category: "Pantry", icon: "💧" },
     { name: "Dunnes Stores Italian Tomato Passata 500g", category: "Pantry" },
     { name: "Dunnes Stores Spanish Extra Virgin Olive Oil 500ml", category: "Pantry" },
     { name: "Dunnes Stores Pure Vegetable Oil 1L\n", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-pure-vegetable-oil-1l-id-100806234" },
