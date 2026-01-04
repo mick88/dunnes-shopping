@@ -116,6 +116,7 @@ window.products = [
     { name: "Dunnes Stores Classic Cat Food Chunks in Jelly Mixed Selection - Adult- 6 x 400g (2.4kg)", category: "Household" },
     { name: "Dunnes Stores My Family Favourites Cat Food Meaty Selection in Gravy 6x400g", category: "Household" },
     { name: "Kleenex Supporting Mind - Single Cube Tissue Box", category: "Household" },
+    { name: "Dunnes Stores Lemon Citrus Washing Up Liquid 500ml", category: "Household" },
 
     // Baby
     { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Baby" },
