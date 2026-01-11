@@ -83,6 +83,7 @@ window.products = [
     { name: "Dunnes Stores Red Pepper", category: "Fresh Produce" },
     { name: "Dunnes Stores Organic Irish Potatoes 2kg", category: "Fresh Produce" },
     { name: "Dunnes Stores Organic Celery", category: "Fresh Produce", icon: "🥬" },
+    { name: "Dunnes Stores Loose Celeriac", category: "Fresh Produce", icon: "🧅", url: "https://www.dunnesstoresgrocery.com/product/dunnes-stores-loose-celeriac-id-100730080?srsltid=AfmBOorTNWkNF5jliIA2-LPHBNdWWIHiGgz7adIVf_BtQxCGv-IyU_PO" },
     { name: "Dunnes Stores My Family Favourites Red Onions", category: "Fresh Produce" },
     { name: "Dunnes Stores My Family Favourites Onions 1kg", category: "Fresh Produce", url: "dunnesstoresgrocery.com/product/dunnes-stores-my-family-favourites-onions-1kg-id-100290685" },
     { name: "Dunnes Stores Organic Vine Tomatoes 400g", category: "Fresh Produce", icon: "🍅" },
