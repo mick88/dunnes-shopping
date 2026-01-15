@@ -49,6 +49,7 @@ window.products = [
     { name: "Dunnes Stores My Family Favourites Plain Flour 2kg", category: "Pantry" },
     { name: "Frontier Foods Tahini 270g", category: "Pantry" },
     { name: "Dunnes Stores Fusilli 500g", category: "Pantry", icon: "🍝", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-fusilli-500g-id-100883303" },
+    { name: "Dunnes Stores Wholefoods Smooth Peanut Butter 340g", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-wholefoods-smooth-peanut-butter-340g-id-100297805" },
 
     // Spices
     { name: "Dunnes Stores Bay Leaves 4g", category: "Spices", icon: "🌿", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-bay-leaves-4g-id-100206145" },
