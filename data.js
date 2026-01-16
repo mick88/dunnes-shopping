@@ -38,9 +38,9 @@ window.products = [
     { name: "Epicure Organic Bijoux Verts Lentils in Water 400g", category: "Pantry" },
     { name: "Epicure Organic Black Beans in Water 400g", category: "Pantry" },
     { name: "Gem Bread Soda 500g", category: "Pantry" },
-    { name: "Dunnes Stores Sparkling Irish Spring Water 6 x 2 Litre", category: "Pantry", icon: "💧" },
     { name: "Dunnes Stores Italian Tomato Passata 500g", category: "Pantry" },
     { name: "Dunnes Stores Spanish Extra Virgin Olive Oil 500ml", category: "Pantry" },
+    { name: "Dunnes Stores Pure Vegetable Oil 1L\n", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-pure-vegetable-oil-1l-id-100806234" },
     { name: "Dunnes Stores Baking at Home Cocoa Powder 250g", category: "Pantry" },
     { name: "Dunnes Stores My Family Favourites Basmati Rice 1kg", category: "Pantry" },
     { name: "Dunnes Stores Organic Porridge Oats Wholegrain 1kg", category: "Pantry" },
@@ -48,6 +48,7 @@ window.products = [
     { name: "Dunnes Stores My Family Favourites Plain Flour 2kg", category: "Pantry" },
     { name: "Frontier Foods Tahini 270g", category: "Pantry" },
     { name: "Dunnes Stores Fusilli 500g", category: "Pantry", icon: "🍝", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-fusilli-500g-id-100883303" },
+    { name: "Dunnes Stores Wholefoods Smooth Peanut Butter 340g", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-wholefoods-smooth-peanut-butter-340g-id-100297805" },
 
     // Spices
     { name: "Dunnes Stores Bay Leaves 4g", category: "Spices", icon: "🌿", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-bay-leaves-4g-id-100206145" },
@@ -82,9 +83,11 @@ window.products = [
     { name: "Dunnes Stores Red Pepper", category: "Fresh Produce" },
     { name: "Dunnes Stores Organic Irish Potatoes 2kg", category: "Fresh Produce" },
     { name: "Dunnes Stores Organic Celery", category: "Fresh Produce", icon: "🥬" },
+    { name: "Dunnes Stores Loose Celeriac", category: "Fresh Produce", icon: "🧅", url: "https://www.dunnesstoresgrocery.com/product/dunnes-stores-loose-celeriac-id-100730080?srsltid=AfmBOorTNWkNF5jliIA2-LPHBNdWWIHiGgz7adIVf_BtQxCGv-IyU_PO" },
     { name: "Dunnes Stores My Family Favourites Red Onions", category: "Fresh Produce" },
-    { name: "Dunnes Stores My Family Favourites Onions 1kg", category: "Fresh Produce" },
+    { name: "Dunnes Stores My Family Favourites Onions 1kg", category: "Fresh Produce", url: "dunnesstoresgrocery.com/product/dunnes-stores-my-family-favourites-onions-1kg-id-100290685" },
     { name: "Dunnes Stores Organic Vine Tomatoes 400g", category: "Fresh Produce", icon: "🍅" },
+    { name: "Dunnes Stores My Family Favourites Fresh Irish Leeks 500g", category: "Fresh Produce", icon: "🥬" },
 
     // Meat & Veggie Alt
     { name: "Quorn Vegetarian Pieces 500g", category: "Meat & Alt" },
@@ -114,6 +117,7 @@ window.products = [
     { name: "Dunnes Stores Classic Cat Food Chunks in Jelly Mixed Selection - Adult- 6 x 400g (2.4kg)", category: "Household" },
     { name: "Dunnes Stores My Family Favourites Cat Food Meaty Selection in Gravy 6x400g", category: "Household" },
     { name: "Kleenex Supporting Mind - Single Cube Tissue Box", category: "Household" },
+    { name: "Dunnes Stores Lemon Citrus Washing Up Liquid 500ml", category: "Household" },
 
     // Baby
     { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Baby" },
