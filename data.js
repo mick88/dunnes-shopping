@@ -44,6 +44,7 @@ window.products = [
     { name: "Dunnes Stores Baking at Home Cocoa Powder 250g", category: "Pantry" },
     { name: "Dunnes Stores My Family Favourites Basmati Rice 1kg", category: "Pantry" },
     { name: "Dunnes Stores Organic Porridge Oats Wholegrain 1kg", category: "Pantry" },
+    { name: "Dunnes Stores Irish Porridge Oats 1.5kg", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/256/product/dunnes-stores-irish-porridge-oats-15kg-id-100806224" },
     { name: "Dunnes Stores Organic Coconut Milk 400ml", category: "Pantry", icon: "🥥" },
     { name: "Dunnes Stores My Family Favourites Plain Flour 2kg", category: "Pantry" },
     { name: "Frontier Foods Tahini 270g", category: "Pantry" },
