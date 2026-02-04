@@ -119,6 +119,8 @@ window.products = [
     { name: "Dunnes Stores My Family Favourites Cat Food Meaty Selection in Gravy 6x400g", category: "Household" },
     { name: "Kleenex Supporting Mind - Single Cube Tissue Box", category: "Household" },
     { name: "Dunnes Stores Lemon Citrus Washing Up Liquid 500ml", category: "Household" },
+    { name: "GreenAware 100% Compostable Food Waste Caddy Bin Liners 14 x 12L", category: "Household", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/256/product/greenaware-100-compostable-food-waste-caddy-bin-liners-14-x-12l-id-100859046" },
+    { name: "Dunnes Stores 30 Tie Handle Pedal Bin Liners 25L", category: "Household", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/256/product/dunnes-stores-30-tie-handle-pedal-bin-liners-25l-id-100866709" },
 
     // Baby
     { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Baby" },
