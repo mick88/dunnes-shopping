@@ -1,0 +1,23 @@
+{
+  "name": "shopping-list-app",
+  "version": "1.0.0",
+  "description": "Basic shopping list web app with some hardcoded shopping items, linking to the store to place order.",
+  "main": "app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mick88/dunnes-shopping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mick88/dunnes-shopping/issues"
+  },
+  "homepage": "https://github.com/mick88/dunnes-shopping#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3"
+  }
+}
