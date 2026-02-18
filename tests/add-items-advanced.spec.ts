@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Shopping List - Add Items Advanced Scenarios', () => {
   test('Add maximum items to shopping list', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Click Add button multiple times to add many items
     let itemsAdded = 0;
@@ -38,7 +38,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Add items when shopping list already has items', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add first item
     const addButtons = page.locator('button:has-text("Add")');
@@ -73,7 +73,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Add items and verify localStorage persistence', async ({ page, context }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add 2-3 items
     let itemsAdded = 0;
@@ -115,7 +115,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Remove item from shopping list', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add an item
     const addButtons = page.locator('button:has-text("Add")');
@@ -138,7 +138,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Add then reset all selections', async ({ page, context }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add 2-3 items
     let itemsAdded = 0;
@@ -185,7 +185,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Verify item counter display format', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Verify no counter is shown initially
     let counter = page.getByText(/\d+ items/);
@@ -214,7 +214,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Verify items display with correct emoji icons', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Verify product names are displayed in the product list
     const productNames = page.locator('a.product-name');
@@ -243,7 +243,7 @@ test.describe('Shopping List - Add Items Advanced Scenarios', () => {
 
   test('Navigate between Browse and My List preserving selections', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Verify Browse tab is active
     await expect(page.getByRole('button', { name: 'Browse' })).toHaveClass(/active/);

@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Shopping List - Add Items to Cart Test Plan', () => {
   test('Add single item to shopping list', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Verify Add buttons are visible
     const firstAddButton = page.getByRole('button', { name: 'Add' }).first();
@@ -37,7 +37,7 @@ test.describe('Shopping List - Add Items to Cart Test Plan', () => {
 
   test('Add multiple items from different categories', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Verify Browse tab is active and products are displayed
     await expect(page.getByRole('button', { name: 'Browse' })).toHaveClass(/active/);
@@ -83,7 +83,7 @@ test.describe('Shopping List - Add Items to Cart Test Plan', () => {
 
   test('Toggle item addition (add then remove by clicking Add again)', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Click Add button for first product
     const addButtons = page.locator('button:has-text("Add")');
@@ -102,7 +102,7 @@ test.describe('Shopping List - Add Items to Cart Test Plan', () => {
 
   test('Add item that was previously dismissed', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Find and click dismiss button for first product
     const dismissButtons = page.locator('button:has-text("✕")');

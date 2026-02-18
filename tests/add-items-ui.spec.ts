@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Shopping List - Add Items UI and Special Cases', () => {
   test('Verify visual feedback when adding item', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Locate the first product card
     const firstProductCard = page.locator('div.product-card').first();
@@ -32,7 +32,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Add item with special characters in product name', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Get the second item which has special character (Łaciate)
     const allAddButtons = page.locator('button:has-text("Add")');
@@ -58,7 +58,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Add item and verify product link opens in new tab', async ({ page, context }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add one item
     const addButtons = page.locator('button:has-text("Add")');
@@ -83,7 +83,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Dismiss and then add same product', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Find first product and get its name
     const firstProduct = page.locator('div.product-card').first();
@@ -114,7 +114,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Verify item badge count on My List tab', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Initially no badge should be visible
     let badge = page.locator('[class*="badge"]').filter({ hasNot: page.locator('text=0') });
@@ -146,7 +146,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Add item from category and verify it maintains order', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Get all product cards initially visible
     const allProducts = page.locator('div.product-card');
@@ -180,7 +180,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Add items from multiple scroll positions', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Add first item from visible items
     const addButtons = page.locator('button:has-text("Add")');
@@ -230,7 +230,7 @@ test.describe('Shopping List - Add Items UI and Special Cases', () => {
 
   test('Double-click Add button behavior', async ({ page }) => {
     // Navigate to the shopping list app
-    await page.goto('https://mick88.github.io/dunnes-shopping/');
+    await page.goto('file://' + __dirname + '/../index.html');
 
     // Get first Add button
     const firstProductCard = page.locator('div.product-card').first();
