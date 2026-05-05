@@ -17,14 +17,17 @@ const elements = {
     btnReset: document.getElementById('btn-reset'),
 };
 
-// Categories Order
+// Preferred display order for categories (any not listed appear at the end)
 const CATEGORY_ORDER = [
     "Fridge",
     "Fresh Produce",
     "Pantry",
     "Meat & Alt",
     "Freezer",
-    "Household"
+    "Spices",
+    "Treats",
+    "Household",
+    "Baby",
 ];
 
 function init() {
@@ -88,9 +91,12 @@ function updateNav() {
     }
 }
 
-// Browse view shows all products now, not just "available" ones
-function getAllProducts() {
-    return window.products;
+// Return categories sorted by CATEGORY_ORDER, with any extras appended at the end
+function getOrderedCategories() {
+    const categoryMap = new Map(window.products.map(cat => [cat.name, cat]));
+    const ordered = CATEGORY_ORDER.filter(name => categoryMap.has(name)).map(name => categoryMap.get(name));
+    const remaining = window.products.filter(cat => !CATEGORY_ORDER.includes(cat.name));
+    return [...ordered, ...remaining];
 }
 
 function render() {
@@ -114,42 +120,30 @@ function updateCounters() {
 }
 
 function renderBrowseView() {
-    const allProducts = getAllProducts();
+    const categories = getOrderedCategories();
 
-    if (allProducts.length === 0) {
+    if (categories.length === 0) {
         elements.mainContent.innerHTML = '<div class="empty-state">All caught up! No more products.</div>';
         return;
     }
 
-    // Group by category
-    const grouped = allProducts.reduce((acc, product) => {
-        if (!acc[product.category]) acc[product.category] = [];
-        acc[product.category].push(product);
-        return acc;
-    }, {});
+    categories.forEach(category => {
+        if (!category.items || category.items.length === 0) return;
 
-    // Render grouped sections
-    // (CATEGORY_ORDER and other logic remains same, just ensuring we render everything)
+        const section = document.createElement('div');
+        section.className = 'category-section';
 
-    const categoriesToRender = [...new Set([...CATEGORY_ORDER, ...Object.keys(grouped)])];
+        const title = document.createElement('h2');
+        title.className = 'category-title';
+        title.textContent = category.name;
+        section.appendChild(title);
 
-    categoriesToRender.forEach(category => {
-        if (grouped[category] && grouped[category].length > 0) {
-            const section = document.createElement('div');
-            section.className = 'category-section';
+        category.items.forEach(product => {
+            const card = createProductCard(product, 'browse', undefined, category.name);
+            section.appendChild(card);
+        });
 
-            const title = document.createElement('h2');
-            title.className = 'category-title';
-            title.textContent = category;
-            section.appendChild(title);
-
-            grouped[category].forEach(product => {
-                const card = createProductCard(product, 'browse');
-                section.appendChild(card);
-            });
-
-            elements.mainContent.appendChild(section);
-        }
+        elements.mainContent.appendChild(section);
     });
 }
 
@@ -170,7 +164,7 @@ function renderListView() {
     elements.mainContent.appendChild(listContainer);
 }
 
-function createProductCard(product, mode, index) {
+function createProductCard(product, mode, index, categoryName) {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.dataset.name = product.name; // Identify for updates
@@ -188,7 +182,7 @@ function createProductCard(product, mode, index) {
 
     const nameLink = document.createElement('a');
     nameLink.className = 'product-name';
-    const emoji = getEmojiForProduct(product);
+    const emoji = getEmojiForProduct(product, categoryName);
     nameLink.textContent = `${emoji} ${product.name}`;
     // Use Google "I'm Feeling Lucky" restricted to the site
     const query = `site:www.dunnesstoresgrocery.com "${product.name}"`;
@@ -276,10 +270,10 @@ function handleReset() {
 
 // Start app
 // Helper to determine emoji based on name/category
-function getEmojiForProduct(product) {
+function getEmojiForProduct(product, categoryName) {
     if (product.icon) return product.icon;
     const name = product.name.toLowerCase();
-    const cat = product.category;
+    const cat = categoryName || '';
 
     // Specific Keyword Matches
     if (name.includes('milk')) return '🥛';
