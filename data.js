@@ -2,7 +2,6 @@ window.products = [
     // Fridge
     { name: "Dunnes Stores Irish Whole Milk 1 Litre", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/product/dunnes-stores-irish-whole-milk-1-litre-id-100806906" },
     { name: "Łaciate 2,0% UHT Milk 1.5 Litre", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/aciate-20-uht-milk-15-litre-id-100193079" },
-    { name: "Dunnes Stores 12 Irish Free Range Eggs Medium", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-12-irish-free-range-eggs-medium-id-100285942" },
     { name: "Dunnes Stores Organic Greek Style Natural Yogurt 500g", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-organic-greek-style-natural-yogurt-500g-id-100292839" },
     { name: "Dunnes Stores Fresh Italian Ricotta 250g", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-fresh-italian-ricotta-250g-id-100856363" },
     { name: "Mlekpol Semi-Fat Curd Cheese 275g", category: "Fridge", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/mlekpol-semifat-curd-cheese-275g-id-100193192" },
@@ -16,7 +15,8 @@ window.products = [
     { name: "Dunnes Stores Spanish Style Potato & Onion Tortilla 500g", category: "Fridge", icon: "🍳", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-spanish-style-potato-&-onion-tortilla-500g-id-100301804" },
 
     // Pantry
-    { name: "Dunnes Stores Organic Spelt Sourdough 720g", category: "Pantry", icon: "🍞" },
+    { name: "Dunnes Stores 12 Irish Free Range Eggs Medium", category: "Pantry", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-12-irish-free-range-eggs-medium-id-100285942" },
+    { name: "Dunnes Stores Organic Spelt Sourdough 720g", category: "Pantry", icon: "🍞", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-organic-100-spelt-sourdough-740g-id-100269826" },
     { name: "Dunnes Stores Organic Ancient Grains 4 Seed Sourdough 800g", category: "Pantry", icon: "🍞" },
     { name: "Dunnes Stores Organic Rye Sourdough 690g", category: "Pantry", icon: "🍞" },
     { name: "Dunnes Stores House Organic Seeded Sourdough 785g", category: "Pantry", icon: "🍞" },
@@ -109,7 +109,7 @@ window.products = [
     // Household & Pets
     { name: "Dunnes Stores Multi Purpose Kitchen Towel 3 Ply 4 Rolls", category: "Household", icon: "🧻" },
     { name: "Comfort Fabric Conditioner Pure 31 washes (930 ml)", category: "Household", icon: "🧴" },
-    { name: "Dunnes Stores Toilet Tissue 12 Rolls", category: "Household", icon: "🧻" },
+    { name: "Dunnes Stores 12 Toilet Tissue Rolls", category: "Household", icon: "🧻", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-12-toilet-tissue-rolls-id-100326547" },
     { name: "Shannon Baking Parchment 12m", category: "Household", icon: "📜" },
     { name: "Crystale Platinum Dishwasher Tablets Lemon Fresh 26x18g (468g)", category: "Household" },
     { name: "Dunnes Stores Rinse Aid for Dishwasher 1 Litre", category: "Household", icon: "🧴" },
@@ -123,6 +123,7 @@ window.products = [
 
     // Baby
     { name: "Dunnes Stores 36 Baby-Dry Easy on Easy off Pants 5 12-17kg", category: "Baby" },
+    { name: "Dunnes Stores 32 Baby-Dry Easy on Easy off Pants 6 15+kg", category: "Baby", url: "https://www.dunnesstoresgrocery.com/sm/pickup/rsid/253/product/dunnes-stores-32-babydry-easy-on-easy-off-pants-6-15kg-id-100316733" },
     { name: "Glenilen Farm Kids Yoghurt Natural 90g", category: "Baby" },
     { name: "Dunnes Stores Cleansing Cotton Pads", category: "Baby" },
     { name: "Sudocrem Antiseptic Healing Cream 250g", category: "Baby" },
